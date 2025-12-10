@@ -17,6 +17,17 @@ app {
 	keepArchiveFileName = true
 }
 
+publishing {
+	publications {
+		maven(MavenPublication) {
+			groupId = project.group
+			artifactId = project.name
+			version = project.version
+			from components.java
+		}
+	}
+}
+
 dependencies {
 	include "com.enonic.xp:lib-content:${xpVersion}"
 	include "com.enonic.xp:lib-portal:${xpVersion}"
