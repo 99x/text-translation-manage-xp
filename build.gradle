@@ -2,6 +2,11 @@ plugins {
 	id 'com.enonic.xp.app' version '3.4.0'
 }
 
+java {
+	sourceCompatibility = JavaVersion.VERSION_11
+	targetCompatibility = JavaVersion.VERSION_11
+}
+
 app {
   	name = "${appName}"
 	displayName = "${appDisplayName}"
